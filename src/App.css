@@ -1,0 +1,286 @@
+/* outer container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  padding: 40px;
+  background: linear-gradient(150deg, #07a3b2, #d9ecc7);
+}
+
+/* main heading of page */
+.heading {
+  text-transform: uppercase;
+  border: 1px solid lightgray;
+  width: 100%;
+  font-size: 2.125rem;
+  font-weight: 600;
+  text-align: center;
+  background: whitesmoke;
+}
+
+/* code editor section */
+/* code editor screen */
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  width: 100%;
+  height: 100%;
+}
+
+.button-editor-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  width: 70%;
+  background: whitesmoke;
+  border: 1px solid gray;
+}
+
+.btn-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.theme-lang-container {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  gap: 20px;
+}
+
+/* labels */
+.theme-select label,
+.language-select label,
+.operation-select label {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.theme-select select,
+.language-select select {
+  padding: 10px;
+  outline: 0;
+  border: 0;
+  text-transform: uppercase;
+  transition: all 0.5s ease-in-out;
+  background: #c1fcd3;
+}
+
+.theme-select select:hover,
+.language-select select:hover {
+  background: #0ccda3;
+  color: white;
+}
+
+.operation-select {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 35%;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* universal button size */
+button {
+  outline: 0;
+  border: 0;
+  padding: 10px 10px;
+  text-transform: uppercase;
+  transition: all 0.5s ease-in-out;
+}
+
+/* svg */
+svg {
+  height: 15px;
+  width: 15px;
+}
+
+/* operations buttons start*/
+.btns button:nth-child(1) {
+  background: #8cc0fc;
+  color: black;
+  display: flex;
+  width: 25%;
+  justify-content: space-around;
+}
+.btns button:nth-child(1):hover {
+  background: #3f99ff;
+  color: white;
+}
+.btns button:nth-child(2) {
+  background: #c1fcd3;
+  width: 25%;
+  color: black;
+  display: flex;
+  justify-content: space-around;
+}
+.btns button:nth-child(2):hover {
+  background: #0ccda3;
+  color: white;
+}
+.btns button:nth-child(3) {
+  background: #fcc1c1;
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+}
+.btns button:nth-child(3):hover {
+  background: #cd0c0c;
+  color: white;
+}
+/* operations buttons end*/
+
+/*code editor output screen styling start */
+.code-editor-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  padding: 10px;
+  background: whitesmoke;
+  border: 1px solid gray;
+}
+
+.result-screen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.result-screen .CodeMirror {
+  height: 100%;
+}
+
+.compile-select {
+  padding: 10px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  flex-direction: column;
+}
+
+.compile-select label {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.compile-select button {
+  background: #c1fcd3;
+  width: 40%;
+  color: black;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  justify-content: space-around;
+}
+
+.compile-select button:hover {
+  background: #0ccda3;
+  color: white;
+}
+
+.output {
+  height: 100%;
+}
+
+/* code editor output screen styling end */
+
+/* editor screen with lock unlock display start*/
+.editor-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.lock {
+  display: flex;
+  justify-content: center;
+  transition: all 2s ease-in-out;
+  align-items: center;
+}
+
+.lock-unlock-sign,
+.lock-unlock-sign-hide {
+  position: absolute;
+  right: 4%;
+  top: 8%;
+  height: 50px;
+  opacity: 0.5;
+  width: 50px;
+  backdrop-filter: blur(16px) saturate(200%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  background: linear-gradient(
+    240deg,
+    #00000017,
+    #00000017,
+    #eeeeee2c,
+    #00000017,
+    #00000017
+  );
+  color: lightgray;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease-in-out;
+}
+
+.lock-unlock-sign-hide {
+  animation: fade 2s ease-in-out;
+  opacity: 0;
+}
+
+.lock-unlock-sign svg {
+  height: 20px;
+  width: 20px;
+}
+
+.editor-screen .CodeMirror {
+  height: 100%;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* editor screen with lock unlock display end*/
+
+.not-for-mobile {
+  display: none;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1025px) {
+  .not-for-mobile {
+    display: flex;
+    text-align: center;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(150deg, #07a3b2, #d9ecc7);
+    text-transform: uppercase;
+  }
+  .container {
+    display: none;
+  }
+}

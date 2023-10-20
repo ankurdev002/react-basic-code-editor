@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  scrollbar-width: thin;
+  scrollbar-color: #0a4c95 #c2d2e4;
+}
+
+:root {
+  --toastify-color-progress-light: linear-gradient(to right, #8cc0fc, #3f99ff);
+  --toastify-color-progress-success: linear-gradient(
+    to right,
+    #c1fcd3,
+    #0ccda3
+  );
+  --toastify-color-progress-error: linear-gradient(to right, #fcc1c1, #cd0c0c);
+}
